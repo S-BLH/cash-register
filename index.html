@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Cash Register</title>
+    <style>
+        body {
+          background: linear-gradient(to right, purple, orange, navy);
+          color: white;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        header {
+          text-align: center;
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 48px;
+          margin: 0;
+          color: navy;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        th, td {
+          padding: 10px;
+          text-align: left;
+        }
+
+        th {
+          background-color: purple;
+          color: white;
+        }
+
+        tr:nth-child(even) {
+          background-color: navy;
+        }
+
+        #icons {
+          display: flex;
+          justify-content: space-evenly;
+          margin-bottom: 20px;
+        }
+
+        #icons img {
+          width: 50px;
+          height: 50px;
+        }
+
+        #buttons {
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: navy;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: purple;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Cash Register</h1>
+  </header>
+  <div id="container">
+    <div id="container-label">
+      <label for="cash">Enter cash from customer:</label>
+      <input type="number" id="cash" min="0" max="666">
+      <button id="purchase-btn">Purchase</button>
+    </div>
+    <div id="caisse">
+      <div id="change-due"></div>
+      <div id="touchPad">
+        <div class="touch-row">
+          <div class="key">1</div>
+          <div class="key">4</div>
+          <div class="key">7</div>
+        </div>
+        <div class="touch-row">
+          <div class="key">2</div>
+          <div class="key">5</div>
+          <div class="key">8</div>
+        </div>
+        <div class="touch-row">
+          <div class="key">3</div>
+          <div class="key">6</div>
+          <div class="key">9</div>
+        </div>
+        <div class="touch-row">
+          <div class="key">.</div>
+          <div class="key">v</div>
+          <div class="key">0</div>
+        </div>
+      </div>
+    </div>
+    <table id="cid">
+      <!-- Placeholder for cash register details -->
+    </table>
+  </div>
+  <div id="tiroirCaisse">
+    <span id="buttonBlack"></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
