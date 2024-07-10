@@ -7,7 +7,7 @@
 - If the money is less than the purchase it will show
 
 ## Demo 📸
-![Demo][image](<Screenshot 2024-07-10 165611.png>)
+![Demo][image](<Screenshot 2024-07-11 030412.png>)
 
 ## Technologies Used 🛠️
 - HTML
