@@ -1,7 +1,3 @@
-body {
-    background: linear-gradient(to right, orange 0%, orange 33.33%, purple 33.33%, purple 66.66%, navy 66.66%, navy 100%);
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+header {
+  color: red;
+}
