@@ -72,8 +72,8 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
     document.getElementById('change-due').innerText = 'Status: INSUFFICIENT_FUNDS';
   } else if (change.status === 'CLOSED') {
     const sortedChange = change.change.sort((a, b) => b[1] - a[1]);
-    document.getElementById('change-due').innerText = `Status: CLOSED; ` + formatChange(sortedChange);
+    document.getElementById('change-due').innerText = `Status: CLOSED; ` + ${formatChange(sortedChange)};
   } else {
-    document.getElementById('change-due').innerText = `Status: OPEN; ` + formatChange(change.change);
+    document.getElementById('change-due').innerText = `Status: OPEN;${formatChange(change.change)}`;
   }
 });
