@@ -7,11 +7,15 @@
     <title>Cash Register</title>
     <style>
         body {
-          background: linear-gradient(to right, purple, orange, navy);
+          background-color: rgb(0, 0, 41);
           color: white;
           font-family: Arial, sans-serif;
           margin: 0;
           padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
         }
 
         header {
@@ -22,7 +26,7 @@
         h1 {
           font-size: 48px;
           margin: 0;
-          color: navy;
+          color: rgb(248, 243, 243);
         }
 
         table {
@@ -37,40 +41,54 @@
         }
 
         th {
-          background-color: purple;
           color: white;
         }
 
         tr:nth-child(even) {
-          background-color: navy;
+          background-color: rgb(1, 1, 43);
         }
 
-        #icons {
-          display: flex;
-          justify-content: space-evenly;
+        #container {
+          background-color: rgb(4, 139, 250);
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+        #container-label {
           margin-bottom: 20px;
         }
 
-        #icons img {
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+        }
+
+        #caisse {
+          background-color: rgb(0, 93, 168);
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+        .key {
+          margin-bottom: 10px;
+        }
+
+        #tiroirCaisse {
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        #buttonBlack {
+          display: inline-block;
           width: 50px;
           height: 50px;
-        }
-
-        #buttons {
-          display: flex;
-          justify-content: space-evenly;
-        }
-
-        button {
-          padding: 10px 20px;
-          background-color: navy;
-          color: white;
-          border: none;
-          cursor: pointer;
-        }
-
-        button:hover {
-          background-color: purple;
+          background-color: black;
         }
     </style>
 </head>
@@ -79,39 +97,33 @@
     <h1>Cash Register</h1>
   </header>
   <div id="container">
+    <table id="cid">
+      <!-- Placeholder for cash register details -->
+    </table>
     <div id="container-label">
       <label for="cash">Enter cash from customer:</label>
-      <input type="number" id="cash" min="0" max="666">
+      <input type="number" id="cash" min="0" max="666" placeholder="Enter amount">
       <button id="purchase-btn">Purchase</button>
     </div>
     <div id="caisse">
       <div id="change-due"></div>
       <div id="touchPad">
         <div class="touch-row">
-          <div class="key">1</div>
-          <div class="key">4</div>
-          <div class="key">7</div>
+          <div class="key">Pennies: $0.97</div>
+          <div class="key">Nickels: $2.05</div>
+          <div class="key">Dimes: $2.9</div>
         </div>
         <div class="touch-row">
-          <div class="key">2</div>
-          <div class="key">5</div>
-          <div class="key">8</div>
+          <div class="key">Quarters: $4.25</div>
+          <div class="key">Ones: $89</div>
+          <div class="key">Fives: $50</div>
         </div>
         <div class="touch-row">
-          <div class="key">3</div>
-          <div class="key">6</div>
-          <div class="key">9</div>
+          <div class="key">Tens: $10</div>
+          <div class="key">Twenties: $60</div>
+          <div class="key">Hundreds: $100</div>
         </div>
-        <div class="touch-row">
-          <div class="key">.</div>
-          <div class="key">v</div>
-          <div class="key">0</div>
-        </div>
-      </div>
     </div>
-    <table id="cid">
-      <!-- Placeholder for cash register details -->
-    </table>
   </div>
   <div id="tiroirCaisse">
     <span id="buttonBlack"></span>
