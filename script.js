@@ -65,7 +65,7 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
   const change = calculateChange(changeDue, cid);
 
   if (cash < price) {
-    console.log("alert('Customer does not have enough money to purchase the item');");
+    console.log('Customer does not have enough money to purchase the item');
   } else if (cash === price) {
     document.getElementById('change-due').innerText = 'No change due - customer paid with exact cash';
   } else if (change.status === 'INSUFFICIENT_FUNDS') {
@@ -74,6 +74,6 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
     const sortedChange = change.change.sort((a, b) => b[1] - a[1]);
     document.getElementById('change-due').innerText = `Status: CLOSED; ` + formatChange(sortedChange);
   } else {
-    document.getElementById('change-due').innerText = `Status: OPEN; ` + formatChange(change.change);
+    document.getElementById('change-due').innerText = `Status: OPEN; ${formatChange(change.change)}`;
   }
 });
