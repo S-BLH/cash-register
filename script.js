@@ -71,7 +71,7 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
   } else if (change.status === 'INSUFFICIENT_FUNDS') {
     document.getElementById('change-due').innerText = 'Status: INSUFFICIENT_FUNDS';
   } else if (change.status === 'CLOSED') {
-    const sortedChange = change.change.sort((a, b) => b[1] - a[1]);
+    const changeDueElement = document.getElementById('change-due');
     changeDueElement.innerText = `Status: CLOSED; ${sortedChange}`;
   } else {
     document.getElementById('change-due').innerText = `Status: OPEN; ${formatChange(change.change)}`;
