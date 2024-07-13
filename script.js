@@ -72,6 +72,7 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
     document.getElementById('change-due').innerText = 'Status: INSUFFICIENT_FUNDS';
   } else if (change.status === 'CLOSED') {
     const changeDueElement = document.getElementById('change-due');
+    const sortedChange = change.change.sort((a, b) => b[1] - a[1]);
     changeDueElement.innerText = `Status: CLOSED; ${sortedChange}`;
   } else {
     document.getElementById('change-due').innerText = `Status: OPEN; ${formatChange(change.change)}`;
