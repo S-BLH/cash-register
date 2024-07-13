@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +51,12 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
+        #total { 
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        } 
         #container-label {
             margin-bottom: 20px;
         }
@@ -127,6 +131,7 @@
         <h1>Cash Register</h1>
     </header>
     <div id="container">
+        <div id="total">Total: 3.26$</div>
         <table id="cid">
             <!-- Placeholder for cash register details -->
         </table>
@@ -134,6 +139,7 @@
             <label for="cash">Enter cash from customer:</label>
             <input type="number" id="cash" min="0" max="666" placeholder="Enter amount">
             <button id="purchase-btn">Purchase</button>
+            <div id="change-due"></div>
         </div>
         <div id="caisse">
             <div id="change-due"></div>
