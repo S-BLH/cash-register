@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 41);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            color: rgb(248, 243, 243);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(1, 1, 43);
+        }
+
+        #container {
+            background-color: rgb(4, 139, 250);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #total { 
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        } 
+        #container-label {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #caisse {
+            background-color: rgb(0, 93, 168);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .touch-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .key {
+            width: 30%;
+            margin-bottom: 10px;
+        }
+
+        #tiroirCaisse {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #buttonBlack {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input[type="number"] {
+                width: 70%;
+            }
+
+            .touch-row {
+                flex-direction: column;
+            }
+
+            .key {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cash Register</h1>
+    </header>
+    <div id="container">
+        <div id="total">Total: 3.26$</div>
+        <table id="cid">
+            <!-- Placeholder for cash register details -->
+        </table>
+        <div id="container-label">
+            <label for="cash">Enter cash from customer:</label>
+            <input type="number" id="cash" min="0" max="666" placeholder="Enter amount">
+            <button id="purchase-btn">Purchase</button>
+            <div id="change-due"></div>
+        </div>
+        <div id="caisse">
+            <div id="change-due"></div>
+            <div id="touchPad">
+                <div class="touch-row">
+                    <div class="key">Pennies: $0.97</div>
+                    <div class="key">Nickels: $2.05</div>
+                    <div class="key">Dimes: $2.9</div>
+                </div>
+                <div class="touch-row">
+                    <div class="key">Quarters: $4.25</div>
+                    <div class="key">Ones: $89</div>
+                    <div class="key">Fives: $50</div>
+                </div>
+                <div class="touch-row">
+                    <div class="key">Tens: $10</div>
+                    <div class="key">Twenties: $60</div>
+                    <div class="key">Hundreds: $100</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tiroirCaisse">
+        <span id="buttonBlack"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
